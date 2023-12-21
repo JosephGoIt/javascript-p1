@@ -5,11 +5,11 @@ console.log("Test");
 // const messa = 'Ang area na may taas na ${taas} at lapad na ${lapad}  ay :';
 // console.log(messa);
 
-const taas = 5;
-const lapad = 4;
-const haba = 3;
-const messa = 'Ang area na may taas na  ${taas}  at lapad na  ${lapad}  ay : ';
-console.log(messa, taas * lapad);
+// const taas = 5;
+// const lapad = 4;
+// const haba = 3;
+// const messa = 'Ang area na may taas na  ${taas}  at lapad na  ${lapad}  ay : ';
+// console.log(messa, taas * lapad);
 
 // const clients = ["Mango", "Banana", "Strawberry", "Cherry"];
 // const checkFruit = prompt("What fruit you are look for?");
@@ -21,15 +21,33 @@ console.log(messa, taas * lapad);
 //     else {console.log(`Fruit ${checkFruit} is not available`)}
 // }
 
-console.log("--------method-------");
-let message = "hello";
-console.log(message.split(""));
+// console.log("--------method-------");
+// let message = "hello";
+// console.log(message.split(""));
 
-const string = "Welcome to the future";
-let words = string.split("");
-console.log(words);
-for (let i=words.length - 1; i>=0; i--) {
-    console.log(words[i]);
+// const string = "Welcome to the future";
+// let words = string.split("");
+// console.log(words);
+// for (let i=words.length - 1; i>=0; i--) {
+//     console.log(words[i]);
+// }
+
+
+function sum(nums) {
+    let total = 0;
+    for(let i = 0; i < nums.length; i++) {
+        total =+ nums[i];
+    }
+    return total;
 }
 
+console.log(sum([5,6,7,8,9]));
 
+
+function nFib(n) {
+    for (let i=0; i<n; i++) {
+        if (i>1){
+            valueToPrint = valueToPrint + 
+        }
+    }
+}
