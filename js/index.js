@@ -243,3 +243,14 @@ console.log("Test");
 //   console.log(`Login: ${this.login.value}, Password: ${this.password.value}`);
 //   form.reset();
 // }
+
+
+let maskBtn = document.getElementById("mask-btn");
+maskBtn.addEventListener("click", (e) => {
+    let text = document.getElementById("mask-input").value;
+    if (text.length > 4) {
+        let maskedText = '#'.repeat(text.length - 4) + text.slice(-4);
+        document.getElementById("mask-input").value = maskedText;
+    }
+});
+
