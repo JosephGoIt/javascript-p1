@@ -11,9 +11,6 @@ const BASE_URL = "https://api.thecatapi.com/v1";
 const API_KEY = "live_hgVLmozRnWu8KA5AwXcTnQHagnoN82mIVmdHKvikbJsJw7KLhHIWKYVzJ3B5sXy5";
 const breedsURL = `${BASE_URL}/breeds?api_key=${API_KEY}`;
 
-// Load breeds when the page loads
-document.addEventListener("DOMContentLoaded", chooseBreed);
-
 // Function to fetch breeds
 function fetchBreeds() {
     return fetch(breedsURL)
@@ -70,10 +67,13 @@ function onError(error) {
 // Function to populate breed options
 function populateBreeds(data) {
     loaderEl.classList.replace("loader", "is-hidden");
-    const optionsMarkup = data.map(({ name, id }) => `<option value="${id}">${name}</option>`).join("");
+    let optionsMarkup = data.map(({ name, id }) => `<option value="${id}">${name}</option>`).join("");
     breedSelectEl.insertAdjacentHTML("beforeend", optionsMarkup);
     breedSelectEl.classList.remove("is-hidden");
 }
+
+// Load breeds when the page loads
+chooseBreed();
 
 // Function to load breeds
 function chooseBreed() {
