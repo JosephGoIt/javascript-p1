@@ -4,7 +4,7 @@ const addBtnEl = document.getElementById("addBtn");
 const myUL = document.getElementById("myUL");
 const myInput = document.getElementById("myInput");
 
-function createLi (text, isDone=false){
+function createLi (text, isDone=false, id){
     let li = document.createElement("li");
     li.innerText = text;
     myUL.appendChild(li);
